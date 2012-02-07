@@ -133,6 +133,8 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Model\" />
+    <Folder Include="ViewModel\" />
     <Folder Include="View\Converter\" />
     <Folder Include="View\Ctrl\" />
   </ItemGroup>

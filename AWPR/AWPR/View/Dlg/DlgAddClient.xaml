@@ -24,6 +24,12 @@
             <StackPanel Orientation="Horizontal">
                 <Label Content="Дата рождения" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
                 <DatePicker/>
+                <Label Content="Полных лет" Height="28" Margin="100,0,10,0" VerticalAlignment="Top" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Группа инвалидности" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <DatePicker/>
+                <Label Content="Полных лет" Height="28" Margin="100,0,10,0" VerticalAlignment="Top" />
             </StackPanel>
         </StackPanel>
         <Button Content="Очистить все поля" Height="23" Margin="12,0,0,12" VerticalAlignment="Bottom" HorizontalAlignment="Left" />

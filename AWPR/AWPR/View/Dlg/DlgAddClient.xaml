@@ -13,6 +13,10 @@
                 <RadioButton Margin="0,5,10,0" Content="самостоятельно"/>
                 <RadioButton Margin="0,5,10,0" Content="ТСР"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Побочное действие лекарств (непереносимость)" Height="28" Margin="0,0,0,0" />
+                <TextBox Width="200"/>
+            </StackPanel>
             <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
                 <Label Content="КАРТА РЕАБИЛИТАЦИИ №" FontWeight="Bold" Height="28" Margin="0,0,10,0" />
                 <TextBox Width="100" />

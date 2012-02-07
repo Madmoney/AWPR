@@ -69,6 +69,13 @@
                 <RadioButton Margin="0,5,10,0" Content="III"/>
                 <RadioButton Margin="0,5,10,0" Content="нет"/>
             </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label Content="Место жительства" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <RadioButton Margin="0,5,10,0" Content="I"/>
+                <RadioButton Margin="0,5,10,0" Content="II"/>
+                <RadioButton Margin="0,5,10,0" Content="III"/>
+                <RadioButton Margin="0,5,10,0" Content="нет"/>
+            </StackPanel>
         </StackPanel>
         <Button Content="Очистить все поля" Height="23" Margin="12,0,0,12" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
         <Button Content="Добавить клиента" Margin="0,0,12,12" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" />        

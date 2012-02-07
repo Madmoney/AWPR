@@ -1,83 +1,130 @@
 ﻿<Window x:Class="AWPR.View.Dlg.DlgAddClient"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Добавление клиента" Height="480" Width="640">
-    <Grid>
-        <StackPanel Margin="12,0,12,0">
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Риск падения" Height="28" Margin="0,0,0,0" />
-                <RadioButton Margin="0,5,10,0" Content="есть"/>
-                <RadioButton Margin="0,5,10,0" Content="нет"/>
-                
-                <Label Content="Способность к передвижению" Height="28" Margin="10,0,0,0" />
-                <RadioButton Margin="0,5,10,0" Content="самостоятельно"/>
-                <RadioButton Margin="0,5,10,0" Content="ТСР"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Побочное действие лекарств (непереносимость)" Height="28" Margin="0,0,0,0" />
-                <TextBox Width="200"/>
-            </StackPanel>
-            <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                <Label Content="КАРТА РЕАБИЛИТАЦИИ №" FontWeight="Bold" Height="28" Margin="0,0,10,0" />
-                <TextBox Width="100" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Сертификат №" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <StackPanel>
-                    <TextBox Width="150" />
-                    <CheckBox Content="другое, указать" FontWeight="Light"/>
+        Title="Добавление клиента" Height="480" Width="640" MaxHeight="760" MaxWidth="640" MinWidth="640">
+    <ScrollViewer>
+        <Grid>
+            <StackPanel Margin="12,0,12,0">
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Риск падения" Height="28" Margin="0,0,0,0" />
+                    <RadioButton Margin="0,5,10,0" Content="есть"/>
+                    <RadioButton Margin="0,5,10,0" Content="нет"/>
+                    
+                    <Label Content="Способность к передвижению" Height="28" Margin="10,0,0,0" />
+                    <RadioButton Margin="0,5,10,0" Content="самостоятельно"/>
+                    <RadioButton Margin="0,5,10,0" Content="ТСР"/>
                 </StackPanel>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Ф.И.О." FontWeight="Bold" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <TextBox Width="150" />
-                <TextBox Width="150" />
-                <TextBox Width="150" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Дата рождения" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <DatePicker/>
-                <Label Content="Полных лет" Height="28" Margin="100,0,10,0" VerticalAlignment="Top" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Группа инвалидности" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <RadioButton Margin="0,5,10,0" Content="I"/>
-                <RadioButton Margin="0,5,10,0" Content="II"/>
-                <RadioButton Margin="0,5,10,0" Content="III"/>
-                <RadioButton Margin="0,5,10,0" Content="нет"/>
-                <RadioButton Margin="0,5,10,0" Content="дата установления"/>
-                <DatePicker IsEnabled="False"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="ИРП №" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <TextBox Width="100"/>
-                <StackPanel IsEnabled="False" Orientation="Horizontal">
-                    <Label Content="Дата выдачи ИРП" Height="28" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Побочное действие лекарств (непереносимость)" Height="28" Margin="0,0,0,0" />
+                    <TextBox Width="290"/>
+                </StackPanel>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Label Content="КАРТА РЕАБИЛИТАЦИИ №" FontWeight="Bold" Height="28" Margin="0,0,10,0" />
+                    <TextBox Width="140" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Сертификат №" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <StackPanel>
+                        <TextBox Width="150" />
+                        <CheckBox Content="другое, указать" FontWeight="Light"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ф.И.О." FontWeight="Bold" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <TextBox Width="170" />
+                    <TextBox Width="170" />
+                    <TextBox Width="170" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Дата рождения" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
                     <DatePicker/>
+                    <Label Content="Полных лет" Height="28" Margin="100,0,10,0" VerticalAlignment="Top" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Группа инвалидности" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <RadioButton Margin="0,5,10,0" Content="I"/>
+                    <RadioButton Margin="0,5,10,0" Content="II"/>
+                    <RadioButton Margin="0,5,10,0" Content="III"/>
+                    <RadioButton Margin="0,5,10,0" Content="нет"/>
+                    <RadioButton Margin="0,5,10,0" Content="дата установления"/>
+                    <DatePicker IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="ИРП №" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <TextBox Width="100"/>
+                    <StackPanel IsEnabled="False" Orientation="Horizontal">
+                        <Label Content="Дата выдачи ИРП" Height="28" Margin="10,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                        <DatePicker/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Срок переосведельствования" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <RadioButton Margin="0,5,10,0" Content="бессрочная"/>
+                    <RadioButton Margin="0,5,10,0" Content="дата"/>
+                    <DatePicker IsEnabled="False"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Степень ограничения способности к трудовой деятельности" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <RadioButton Margin="0,5,10,0" Content="I"/>
+                    <RadioButton Margin="0,5,10,0" Content="II"/>
+                    <RadioButton Margin="0,5,10,0" Content="III"/>
+                    <RadioButton Margin="0,5,10,0" Content="нет"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Место жительства" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <StackPanel Margin="0,0,10,0">
+                        <TextBox/>
+                        <Label Content="индекс" Margin="0,-8,0,0" FontWeight="Light"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,10,0">
+                        <TextBox/>
+                        <Label Content="населёный пункт" Margin="0,-8,0,0" FontWeight="Light"/>
+                    </StackPanel>
+                    <StackPanel Margin="0,0,10,0">
+                        <TextBox/>
+                        <Label Content="дом" Margin="0,-8,0,0" FontWeight="Light"/>
+                    </StackPanel>
+                    <StackPanel>
+                        <TextBox/>
+                        <Label Content="квартира" Margin="0,-8,0,0" FontWeight="Light"/>
+                    </StackPanel>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Контактные телефоны" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <TextBox Width="425"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Ф.И.О. ближайшего родственника" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
+                    <TextBox Width="120" />
+                    <TextBox Width="120" />
+                    <TextBox Width="120" />
+                </StackPanel>
+                <GroupBox Header="Тип прибывания">
+                    <StackPanel Orientation="Horizontal">
+                        <RadioButton Content="Дневное пребывание"/>
+                        <RadioButton Content="Врменное пребывание" Margin="10,0,0,0"/>
+                        <DatePicker Margin="10,0,0,0" IsEnabled="False"/>
+                    </StackPanel>    
+                </GroupBox>
+                <GroupBox Header="Диагноз" FontWeight="Bold">
+                    <StackPanel>
+                        <Label FontWeight="Normal" Content="Основной"/>
+                        <TextBox Height="40"/>
+
+                        <Label FontWeight="Normal" Content="Осложнения основного"/>
+                        <TextBox Height="40"/>
+                        
+                        <Label FontWeight="Normal" Content="Сопутствующий"/>
+                        <TextBox Height="40"/>
+                    </StackPanel>
+                </GroupBox>
+                <StackPanel Orientation="Horizontal">
+                    <Label Content="Шифр по МКБ-10" FontWeight="Bold"/>
+                    <TextBox Width="100"/>
                 </StackPanel>
             </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Срок переосведельствования" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <RadioButton Margin="0,5,10,0" Content="бессрочная"/>
-                <RadioButton Margin="0,5,10,0" Content="дата"/>
-                <DatePicker IsEnabled="False"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Степень ограничения способности к трудовой деятельности" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <RadioButton Margin="0,5,10,0" Content="I"/>
-                <RadioButton Margin="0,5,10,0" Content="II"/>
-                <RadioButton Margin="0,5,10,0" Content="III"/>
-                <RadioButton Margin="0,5,10,0" Content="нет"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <Label Content="Место жительства" Height="28" Margin="0,0,10,0" HorizontalAlignment="Left" VerticalAlignment="Top" />
-                <RadioButton Margin="0,5,10,0" Content="I"/>
-                <RadioButton Margin="0,5,10,0" Content="II"/>
-                <RadioButton Margin="0,5,10,0" Content="III"/>
-                <RadioButton Margin="0,5,10,0" Content="нет"/>
-            </StackPanel>
-        </StackPanel>
-        <Button Content="Очистить все поля" Height="23" Margin="12,0,0,12" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
-        <Button Content="Добавить клиента" Margin="0,0,12,12" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" />        
-    </Grid>
+            <Button Content="Очистить все поля" Height="23" Margin="12,0,0,12" VerticalAlignment="Bottom" HorizontalAlignment="Left" />
+            <Button Content="Добавить клиента" Margin="0,0,12,12" Height="23" VerticalAlignment="Bottom" HorizontalAlignment="Right" />        
+        </Grid>
+    </ScrollViewer>
 </Window>

@@ -1,0 +1,150 @@
+﻿<ribbon:RibbonWindow x:Class="AWPR.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:ribbon="clr-namespace:Microsoft.Windows.Controls.Ribbon;assembly=RibbonControlsLibrary"
+        Title="АРМ &quot;Реабилитация инвалидов&quot;"
+		Width="829" Height="579" WindowStyle="SingleBorderWindow" MinHeight="480" MinWidth="664">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        
+        <ribbon:Ribbon>
+            <!-- Главное меню -->
+            <ribbon:Ribbon.ApplicationMenu>
+                <ribbon:RibbonApplicationMenu SmallImageSource="..\..\Images\LargeIcon.png" >
+                    <ribbon:RibbonApplicationMenuItem Header="Смена пользователя" />
+                    <ribbon:RibbonApplicationMenuItem Header="Выход из системы"/>
+                </ribbon:RibbonApplicationMenu>
+            </ribbon:Ribbon.ApplicationMenu>
+            
+            <!-- Вкладка Главная -->
+            <ribbon:RibbonTab Header="Главная">
+                <ribbon:RibbonGroup Header="Просмотр">
+                    <ribbon:RibbonButton 
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Расписание на сегодня" />
+                    <ribbon:RibbonButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Поиск" />
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Управление">
+                    <ribbon:RibbonButton 
+                        Width="70"
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Новый приём"/>
+                    <ribbon:RibbonButton
+                        Width="70"
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Новый клиент"/>
+                    <ribbon:RibbonButton
+                        Width="70"
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Новый специалист"/>
+                    <ribbon:RibbonButton
+                        Width="83"
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Новый пользователь"/>
+                </ribbon:RibbonGroup>
+                <ribbon:RibbonGroup Header="Помощь">
+                    <ribbon:RibbonButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Справка"/>
+                    <ribbon:RibbonButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="О программе"/>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            
+            <!-- Вкладка Управление -->
+            <ribbon:RibbonTab Header="Управление">
+                <ribbon:RibbonGroup>
+                    <ribbon:RibbonSplitButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Width="70"
+                        Label="Клиенты">
+                        <ribbon:RibbonSplitButton.Items>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Все клиенты"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Найти клиента"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Добавить клиента"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Удалить клиента"/>
+                        </ribbon:RibbonSplitButton.Items>
+                    </ribbon:RibbonSplitButton>
+                    <ribbon:RibbonSplitButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Width="83"
+                        Label="Специалисты">
+                        <ribbon:RibbonSplitButton.Items>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Все специалисты"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Найти специалиста"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Добавить специалиста"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Удалить специалиста"/>
+                        </ribbon:RibbonSplitButton.Items>
+                    </ribbon:RibbonSplitButton>
+                    <ribbon:RibbonSplitButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Width="70"
+                        Label="Услуги">
+                        <ribbon:RibbonSplitButton.Items>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Все услуги"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Добавить услугу"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Удалить услугу"/>
+                        </ribbon:RibbonSplitButton.Items>
+                    </ribbon:RibbonSplitButton>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+            
+            <!-- Вкладка Система -->
+            <ribbon:RibbonTab Header="Система">
+                <ribbon:RibbonGroup>
+                    <ribbon:RibbonSplitButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Пользователи">
+                        <ribbon:RibbonSplitButton.Items>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Все пользователи"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Найти пользователя"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Добавить пользователя"/>
+                            <ribbon:RibbonButton
+                                SmallImageSource="..\..\Images\SmallIcon.png"
+                                Label="Удалить пльзоателя"/>
+                        </ribbon:RibbonSplitButton.Items>
+                    </ribbon:RibbonSplitButton>
+                    <ribbon:RibbonButton
+                        LargeImageSource="..\..\Images\LargeIcon.png"
+                        Label="Настройки">
+                    </ribbon:RibbonButton>
+                </ribbon:RibbonGroup>
+            </ribbon:RibbonTab>
+        </ribbon:Ribbon>
+    </Grid>
+</ribbon:RibbonWindow>
